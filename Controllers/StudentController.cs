@@ -19,6 +19,11 @@ namespace studentGitApi.Controllers
             _context.SaveChanges();
             return Ok(std);
         }
+        [HttpGet]
+        public IActionResult Index() {
+          var x=  _context.Students.ToList();
+            return Ok(x);
+        }
         
     }
 }
